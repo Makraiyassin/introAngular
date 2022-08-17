@@ -1,0 +1,14 @@
+.red{
+    color: red;
+}
+.blue{
+    color: blue;
+}   
+.green{
+    color: green;
+}
+
+.card-text{
+    height: 100px;
+    overflow: auto;
+}

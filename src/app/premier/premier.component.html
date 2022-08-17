@@ -1,0 +1,20 @@
+
+<div class="card" style="width: 18rem;">
+  <img [src]="pathImage"/>
+  <div class="card-body">
+    <h5 class="card-title" [ngClass]="{'red':random % 2 == 0 , 'blue':random%2 != 0 }" >{{data.title}}</h5>
+    <p class="card-text" [ngStyle]="{'font-weight': fontWeight}" > {{data.description}} </p>
+    <a href="#" (click)="showAlerte()" class="btn btn-primary">Go somewhere</a>
+  </div>
+  <input type="number" class="text-center" [(ngModel)]="random">
+  <br/>
+  <div class="alert alert-info" *ngIf="random % 2 == 0"><p>s'affiche si paire</p></div>
+  <div class="alert alert-danger" *ngIf="random % 2 != 0"><p>s'affiche si impaire</p></div>
+  <div class="alert alert-info" [hidden]="random % 2 == 0"><p>se cache si paire</p></div>
+  <div class="alert alert-danger" [hidden]="random % 2 != 0"><p>se cache si impaire</p></div>
+</div>
+
+<ul hidden>
+  <li *ngFor="let i of array"> {{i}}</li>
+</ul>
+
