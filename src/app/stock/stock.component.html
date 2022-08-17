@@ -1,0 +1,14 @@
+<div id="stock">
+  <div  *ngFor="let product of stock" class="card" style="width: 18rem;">
+    <img [src]="product.imageUrl"/>
+    <div class="card-body">
+      <h5 class="card-title">{{product.name}}</h5>
+      <p class="card-text">description: {{product.description}} </p>
+      <p class="card-text">price: {{product.price}} € </p>
+      <p class="card-text">quantity: {{product.quantity}} </p>
+      <a (click)="buy(product)" class="btn btn-primary">buy</a>
+    </div>
+  </div>
+
+</div>
+
