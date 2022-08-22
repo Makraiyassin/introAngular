@@ -1,0 +1,73 @@
+
+form {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+
+}
+
+form input::placeholder {
+  color: rgba(201, 206, 206, 0.488);
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+textarea::placeholder {
+  color: rgba(201, 206, 206, 0.488);
+}
+
+input[type=submit] {
+  background-color: #77C9CE;
+  color: #FBF8F8;
+  font-family: 'Roboto', sans-serif;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+
+input[type=submit]:hover {
+  background-color: grey;
+}
+
+label {
+  color: #77C9CE;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.formulaire {
+  border-radius: 5px;
+  background-color: #FBF8F8;
+  flex: 25%;
+  margin-left: 100px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width:50%;
+}
+
+.droite {
+  flex: 25%;
+  margin-right: 100px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.droite img {
+  max-width: 100%;
+}

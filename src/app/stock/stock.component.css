@@ -1,7 +1,23 @@
-#stock{
+#stock, #filters{
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
+}
+#filters div,#filters input{
+  text-align: center;
 }
 .card{
   margin: 1px;
+}
+
+label, input {
+  margin: 1px;
+}
+
+img{
+  height: 200px;
+}
+
+#links a {
+  margin: 2px;
 }

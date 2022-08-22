@@ -1,8 +1,9 @@
-
+<h1>Demo!</h1>
 <div class="card" style="width: 18rem;">
   <img [src]="pathImage"/>
   <div class="card-body">
     <h5 class="card-title" [ngClass]="{'red':random % 2 == 0 , 'blue':random%2 != 0 }" >{{data.title}}</h5>
+    <p> date:  {{currentDate | date : 'dd-MM-YYYY'}} </p>
     <p class="card-text" [ngStyle]="{'font-weight': fontWeight}" > {{data.description}} </p>
     <a href="#" (click)="showAlerte()" class="btn btn-primary">Go somewhere</a>
   </div>

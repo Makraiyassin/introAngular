@@ -1,14 +1,31 @@
+<h1>Stock!</h1>
+
+<div id="filters">
+  <div>
+    <label for="filtreQuantity">filtrer les produit indisponible </label>
+    <input id="filtreQuantity" type="checkbox" [(ngModel)]="onlyAvailable">
+  </div>
+  <div>
+    <label for="filtrePrice">filtrer par prix min et max </label>
+    <div id="filtrePrice">
+      <input id="min" type="number" [(ngModel)]="min">
+      <input id="max" type="number" [(ngModel)]="max">
+    </div>
+  </div>
+</div>
 <div id="stock">
-  <div  *ngFor="let product of stock" class="card" style="width: 18rem;">
+  <div  *ngFor="let product of stock | available : onlyAvailable | minMax : min : max" class="card" style="width: 18rem;">
     <img [src]="product.imageUrl"/>
     <div class="card-body">
       <h5 class="card-title">{{product.name}}</h5>
       <p class="card-text">description: {{product.description}} </p>
-      <p class="card-text">price: {{product.price}} € </p>
+      <p class="card-text">price: {{product.price | currency : 'EUR' }}</p>
       <p class="card-text">quantity: {{product.quantity}} </p>
+      <div id="links">
       <a (click)="buy(product)" class="btn btn-primary">buy</a>
+      <a class="btn btn-primary" [routerLink]="'/product/'+product.id">show</a>
+      </div>
     </div>
   </div>
-
 </div>
 

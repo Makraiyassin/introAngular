@@ -1,0 +1,11 @@
+<p>product!</p>
+
+<div>
+  <img [src]="stock[id-1].imageUrl"/>
+  <div class="card-body">
+    <h5 class="card-title">{{stock[id-1].name}}</h5>
+    <p class="card-text">description: {{stock[id-1].description}} </p>
+    <p class="card-text">price: {{stock[id-1].price | currency : 'EUR' }}</p>
+    <p class="card-text">quantity: {{stock[id-1].quantity}} </p>
+  </div>
+</div>
