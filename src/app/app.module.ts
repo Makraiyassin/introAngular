@@ -13,6 +13,7 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { PariteComponent } from './parite/parite.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProductComponent } from './product/product.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ProductComponent } from './product/product.component';
     BrowserModule,
     NgbModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

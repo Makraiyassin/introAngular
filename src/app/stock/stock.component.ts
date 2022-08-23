@@ -19,7 +19,6 @@ export class StockComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
   buy(product : Product): void{
     // product.quantity > 1 ? product.quantity -- : this.stock.splice(this.stock.indexOf(product),this.stock.indexOf(product)+1);
     if(product.quantity >= 1)  product.quantity --;
